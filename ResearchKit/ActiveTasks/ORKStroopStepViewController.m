@@ -112,6 +112,8 @@
 
     self.questionNumber = 0;
     _stroopContentView = [ORKStroopContentView new];
+    [_stroopContentView setUseTextForStimuli: [self stroopStep].useTextForStimuli];
+    [_stroopContentView setUseGridLayoutForButtons: [self stroopStep].useGridLayoutForButtons];
     self.activeStepView.activeCustomView = _stroopContentView;
     
     [self.stroopContentView.RButton addTarget:self
